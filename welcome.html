@@ -79,7 +79,7 @@
             <input type="number" id="heightFeet" name="heightFeet" placeholder="Height (in feet)" required>
             <input type="number" id="heightInches" name="heightInches" placeholder="Height (in inches)" required>
             <textarea id="about" name="about" placeholder="Talk a bit about yourself..." rows="4" required></textarea>
-            <input type="file" id="profilePic" name="profilePic" accept="image/*" required>
+            <input type="file" id="profilePic" name="profilePic" accept="image/*">
             <button type="submit">Submit</button>
         </form>
     </section>
@@ -95,13 +95,17 @@
             var heightInches = document.getElementById('heightInches').value;
             var about = document.getElementById('about').value;
             var profilePic = document.getElementById('profilePic').files[0];
-            if (heightFeet && heightInches && age && job && about && profilePic) {
+            if (heightFeet && heightInches && age && job && about) {
                 var totalHeightInches = (parseInt(heightFeet) * 12) + parseInt(heightInches);
                 var heightInCm = totalHeightInches * 2.54;
                 var formattedHeight = heightFeet + " ft " + heightInches + " in";
-                window.location.href = 'profile.html?age=' + age + '&job=' + job + '&height=' + formattedHeight + '&heightCm=' + heightInCm + '&about=' + encodeURIComponent(about); 
+                window.location.href = 'profile.html?age=' + age + 
+                                       '&job=' + job + 
+                                       '&height=' + formattedHeight + 
+                                       '&heightCm=' + heightInCm + 
+                                       '&about=' + encodeURIComponent(about);
             } else {
-                alert("Please fill in all the required fields and add a profile picture.");
+                alert("Please fill out all required fields.");
             }
         });
     </script>
