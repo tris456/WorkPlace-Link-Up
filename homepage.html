@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Software Engineers Feed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1b263b, #415a77);
+            color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 700px;
+            margin: 30px auto;
+            background: rgba(248, 249, 250, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .feed-person {
+            background: rgba(248, 249, 250, 0.2);
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            text-align: left;
+            color: #f8f9fa;
+            display: flex;
+            align-items: center;
+        }
+        .feed-person img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid #f8f9fa;
+        }
+        .feed-person-details {
+            flex: 1;
+        }
+        button {
+            background: #1d3557;
+            color: #f8f9fa;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background: #0d1b2a;
+        }
+        .chat-box {
+            margin-top: 20px;
+            background: rgba(248, 249, 250, 0.2);
+            padding: 15px;
+            border-radius: 15px;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Software Engineer Feed</h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+    <section>
+        <h2>People in Your Field</h2>
+
+        <div class="feed-person">
+            <img src="https://via.placeholder.com/60" alt="Profile Picture">
+            <div class="feed-person-details">
+                <h3>Jamie Rogers</h3>
+                <p>Software Engineer at InnovateTech</p>
+            </div>
+        </div>
+        <div class="feed-person">
+            <img src="https://via.placeholder.com/60" alt="Profile Picture">
+            <div class="feed-person-details">
+                <h3>John Smith</h3>
+                <p>Software Engineer at FutureSoft</p>
+            </div>
+        </div>
+        <div class="feed-person">
+            <img src="https://via.placeholder.com/60" alt="Profile Picture">
+            <div class="feed-person-details">
+                <h3>Alice Johnson</h3>
+                <p>Software Engineer at CodeWorld</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Chat with Jamie Rogers</h2>
+        <div class="chat-box" id="chatBox">
+            <div id="chatContainer">
+                <iframe src="https://www.chatbase.co/chatbot-iframe/o3BcVZ54ucEjhdrm81IEK"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Workplace Link Up. All rights reserved.</p>
+    </footer>
+    <script>
+        function logout() {
+            window.location.href = 'logout.html';
+        }
+    </script>
+</body>
+</html>
