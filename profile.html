@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1b263b, #415a77);
+    color: #f8f9fa;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+section {
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: 30px auto;
+    background: rgba(248, 249, 250, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+h1, h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 1.2em;
+    color: #f8f9fa;
+}
+img {
+    border-radius: 50%;
+    max-width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #f8f9fa;
+}
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+button {
+    background: #1d3557;
+    color: #f8f9fa;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #0d1b2a;
+}
+    </style>
+</head>
+<body>
+    <section id="profileSection">
+        <h2>Your Profile</h2>
+        <p>Welcome, here’s the information you submitted:</p>
+        <div>
+            <img id="profileImage" src="" alt="Profile Picture">
+        </div>
+        <p><strong>Age:</strong> <span id="userAge"></span></p>
+        <p><strong>Job:</strong> <span id="userJob"></span></p>
+        <p><strong>Height:</strong> <span id="userHeight"></span> cm</p>
+        <button id="viewSameJobBtn">View People in the Same Job</button>
+    </section>
+    <footer>
+        <p>&copy; 2025 Workplace Link Up. All rights reserved.</p>
+    </footer>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const age = urlParams.get('age');
+        const job = urlParams.get('job');
+        const height = urlParams.get('height');
+        const jobField = urlParams.get('jobField'); 
+        document.getElementById('userAge').textContent = age;
+        document.getElementById('userJob').textContent = job;
+        document.getElementById('userHeight').textContent = height;
+        const profileImage = document.getElementById('profileImage');
+        profileImage.src = 'path/to/your/image.jpg'; 
+        document.getElementById('viewSameJobBtn').addEventListener('click', function() {
+            window.location.href = 'samejob.html?jobField=' + encodeURIComponent(jobField); 
+        });
+    </script>
+</body>
+</html>
