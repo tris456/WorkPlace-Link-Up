@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People in the Same Job</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1b263b, #415a77);
+            color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 600px;
+            margin: 30px auto;
+            background: rgba(248, 249, 250, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .person {
+            background: rgba(248, 249, 250, 0.2);
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            text-align: left;
+            color: #f8f9fa;
+        }
+        .person img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            float: left;
+            border: 2px solid #f8f9fa;
+        }
+        .person-details {
+            margin-left: 70px;
+        }
+        button {
+            background: #1d3557;
+            color: #f8f9fa;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background: #0d1b2a;
+        }
+        .chat-box {
+            margin-top: 20px;
+            background: rgba(248, 249, 250, 0.2);
+            padding: 15px;
+            border-radius: 15px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <section id="sameJobSection">
+        <h2>People in the Same Job Field</h2>
+        <p>Here is someone in the same job as you!</p>
+        <div class="person">
+            <img src="https://via.placeholder.com/50" alt="Profile Picture">
+            <div class="person-details">
+                <h3>Jamie Rogers</h3>
+                <p>Job Title: Software Engineer</p>
+                <button onclick="startChat()">Start Chat</button>
+            </div>
+        </div>
+        <button onclick="goToHomepage()">Go to Homepage</button>
+        <div class="chat-box" id="chatBox" style="display:none;">
+            <h3>Chat with Jamie Rogers</h3>
+            <div id="chatContainer"></div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Workplace Link Up. All rights reserved.</p>
+    </footer>
+    <script>
+        function startChat() {
+            document.getElementById('chatBox').style.display = 'block';
+            document.getElementById('chatContainer').innerHTML = '';
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.chatbase.co/chatbot-iframe/o3BcVZ54ucEjhdrm81IEK';
+            document.getElementById('chatContainer').appendChild(iframe);
+        }
+        function goToHomepage() {
+            window.location.href = 'homepage.html';
+        }
+    </script>
+</body>
+</html>
