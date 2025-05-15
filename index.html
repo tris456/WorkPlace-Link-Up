@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workplace Link Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1b263b, #415a77);
+            color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #f8f9fa;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #adb5bd;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 600px;
+            margin: 30px auto;
+            background: rgba(248, 249, 250, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #f8f9fa;
+        }
+        button {
+            background: #1d3557;
+            color: #f8f9fa;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0d1b2a;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+            background: #f8f9fa;
+            color: #1b263b;
+        }
+        textarea {
+            resize: none;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Workplace Link Up 💼</h1>
+        <nav>
+            <ul>
+                <li><a href="#welcome">Welcome</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="welcome">
+        <h2>♾️ Welcome to Workplace Link Up! ♾️</h2>
+        <p>Find meaningful connections at your workplace.</p>
+        <p>Sign up to start meeting new people!</p>
+        <a href="#signup"><button>Get Started</button></a>
+    </section>
+    <section id="signup">
+        <h2>💌 Sign Up 💌</h2>
+        <form action="signup.php" method="POST">
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+    <section id="login">
+        <h2>🔑 Login 🔑</h2>
+        <form action="login.php" method="POST">
+            <input type="email" name="login_email" placeholder="Email" required>
+            <input type="password" name="login_password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to helping you connect with coworkers in a meaningful way.</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>❤️ Profile creation</li>
+            <li>🔍 Smart matching algorithm</li>
+            <li>💬 Private messaging</li>
+            <li>🎉 Events and meetups</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us!</p>
+        <form action="thankyou.html" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Workplace Link Up. All rights reserved.</p>
+    </footer>
+</body>
+</html>
